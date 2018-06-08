@@ -25,12 +25,12 @@ public class productListActivity extends AppCompatActivity {
         //get data from previous activity when item of listView is clicked using intent
         Intent intent = getIntent();
         String mActionBatTitle = intent.getStringExtra("actionBarTitle");
-        String mContent = intent.getStringExtra("contentTv");
+        //String mContent = intent.getStringExtra("contentTv");
 
         //set actionbar title
         actionBar.setTitle(mActionBatTitle);
         //set text in textView
-        mDetailTv.setText(mContent);
+        //mDetailTv.setText(mContent);
 
         mainGrid = (GridLayout)findViewById(R.id.mainGrid);
 

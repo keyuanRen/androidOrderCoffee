@@ -83,43 +83,43 @@ public class listViewShopAdapter extends BaseAdapter{
                 if (modellist.get(position).getTitle().equals("Coffee1"))
                 {
                     //start NewActivity with title for actionbar and text for textView
-                    Intent intent = new Intent(mContext, shopListActivity.class);
+                    Intent intent = new Intent(mContext, productListActivity.class);
                     intent.putExtra("actionBarTitle", "Coffee1");
-                    intent.putExtra("contentTV","Price: $5.00");
+                    //intent.putExtra("contentTV","Price: $5.00");
                     mContext.startActivity(intent);
 
                 }
                 if (modellist.get(position).getTitle().equals("Coffee2"))
                 {
                     //start NewActivity with title for actionbar and text for textView
-                    Intent intent = new Intent(mContext, shopListActivity.class);
+                    Intent intent = new Intent(mContext, productListActivity.class);
                     intent.putExtra("actionBarTitle", "Coffee2");
-                    intent.putExtra("contentTV","Price: $5.00");
+                    //intent.putExtra("contentTV","Price: $5.00");
                     mContext.startActivity(intent);
 
                 }
                 if (modellist.get(position).getTitle().equals("Coffee3"))
                 {
                     //start NewActivity with title for actionbar and text for textView
-                    Intent intent = new Intent(mContext, shopListActivity.class);
+                    Intent intent = new Intent(mContext, productListActivity.class);
                     intent.putExtra("actionBarTitle", "Coffee3");
-                    intent.putExtra("contentTV","Price: $5.00");
+                    //intent.putExtra("contentTV","Price: $5.00");
                     mContext.startActivity(intent);
 
                 }if (modellist.get(position).getTitle().equals("Coffee4"))
                 {
                     //start NewActivity with title for actionbar and text for textView
-                    Intent intent = new Intent(mContext, shopListActivity.class);
+                    Intent intent = new Intent(mContext, productListActivity.class);
                     intent.putExtra("actionBarTitle", "Coffee4");
-                    intent.putExtra("contentTV","Price: $5.00");
+                    //intent.putExtra("contentTV","Price: $5.00");
                     mContext.startActivity(intent);
 
                 }if (modellist.get(position).getTitle().equals("Coffee5"))
                 {
                     //start NewActivity with title for actionbar and text for textView
-                    Intent intent = new Intent(mContext, shopListActivity.class);
+                    Intent intent = new Intent(mContext, productListActivity.class);
                     intent.putExtra("actionBarTitle", "Coffee5");
-                    intent.putExtra("contentTV","Price: $5.00");
+                    //intent.putExtra("contentTV","Price: $5.00");
                     mContext.startActivity(intent);
 
                 }

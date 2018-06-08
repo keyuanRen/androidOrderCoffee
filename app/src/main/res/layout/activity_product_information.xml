@@ -65,8 +65,9 @@
             android:text="  Contrary to popular belece og it over rofess ssage, and going through the"
             android:textSize="20sp" />
         <Button
-            android:id="@+id/saveProductToOrderList"
-            android:text="Add To Order List"
+            android:id="@+id/savetoProductToOrderList"
+            android:onClick="ConfirmOrder"
+            android:text="Add To Shopping Cart"
             android:layout_gravity="center"
             android:textSize="20sp"
             android:layout_marginTop="60dp"
