@@ -9,16 +9,20 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class loginActivity extends AppCompatActivity {
 
     EditText checkUsername;
     EditText checkPassword;
+    DatabaseBasic db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        db = new DatabaseBasic(this);
 
         checkUsername = (EditText)findViewById(R.id.checkUser);
         checkPassword = (EditText)findViewById(R.id.checkPass);
@@ -30,8 +34,21 @@ public class loginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent loginIntent = new Intent(loginActivity.this , MainActivity.class);
-                loginActivity.this.startActivity(loginIntent);
+                String username = checkUsername.getText().toString();
+                String password = checkPassword.getText().toString();
+                Boolean checkUser = db.checkLogin(username,password);
+
+                if(checkUser == true)
+                {
+
+                    Intent loginIntent = new Intent(loginActivity.this , MainActivity.class);
+                    loginActivity.this.startActivity(loginIntent);
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Wrong Username Or Password",Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
@@ -51,5 +68,10 @@ public class loginActivity extends AppCompatActivity {
         //empty textboxes
         checkUsername.setText("");
         checkPassword.setText("");
+
+        String username = checkUsername.getText().toString();
+        Intent i = new Intent(loginActivity.this,useraccountFragment.class);
+        i.putExtra("Username",username);
+        startActivity(i);
     }
 }

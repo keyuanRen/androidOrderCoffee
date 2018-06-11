@@ -11,6 +11,7 @@
         android:layout_alignBottom="@+id/imageView4"
         android:layout_toEndOf="@+id/textView2"
         android:layout_toRightOf="@+id/textView2"
+        android:id="@+id/accountUsername"
         android:text="Hi Username"
         android:textSize="30sp" />
 
